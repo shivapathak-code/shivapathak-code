@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 340" width="100%" height="auto">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="idBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080C1B" />
+      <stop offset="60%" stop-color="#0B1228" />
+      <stop offset="100%" stop-color="#070A16" />
+    </linearGradient>
+
+    <!-- Border Gradient -->
+    <linearGradient id="idBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="50%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#FF2A5F" />
+    </linearGradient>
+
+    <!-- Electric Bar Gradient -->
+    <linearGradient id="barBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#00F0FF" />
+    </linearGradient>
+
+    <!-- Crimson Bar Gradient -->
+    <linearGradient id="barCrimson" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E11D48" />
+      <stop offset="100%" stop-color="#FF2A5F" />
+    </linearGradient>
+
+    <pattern id="idGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#1E293B" stroke-width="0.6" opacity="0.4" />
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes pulseLed {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.35; transform: scale(0.85); }
+    }
+    .led-blue {
+      animation: pulseLed 2.2s infinite ease-in-out;
+      transform-origin: 24px 24px;
+    }
+    .led-red {
+      animation: pulseLed 1.8s infinite ease-in-out;
+      transform-origin: 554px 24px;
+    }
+    .mono {
+      font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+    }
+    .sans {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    }
+  </style>
+
+  <!-- Container -->
+  <rect x="2" y="2" width="576" height="336" rx="14" fill="url(#idBg)" stroke="url(#idBorder)" stroke-width="1.6" />
+  <rect x="3" y="3" width="574" height="334" rx="13" fill="url(#idGrid)" />
+
+  <!-- Top Header / Identification Bar -->
+  <g transform="translate(16, 16)">
+    <circle cx="10" cy="10" r="4.5" fill="#00F0FF" class="led-blue" />
+    <circle cx="10" cy="10" r="1.5" fill="#FFFFFF" />
+
+    <text x="24" y="14" fill="#00F0FF" font-size="11" font-weight="700" letter-spacing="1.2" class="mono">
+      OPERATOR // SHIVA-PATHAK
+    </text>
+
+    <!-- Top Right ID Chip -->
+    <rect x="420" y="0" width="126" height="20" rx="3" fill="#0E162E" stroke="#FF2A5F" stroke-width="0.8" />
+    <circle cx="430" cy="10" r="3" fill="#FF2A5F" class="led-red" />
+    <text x="440" y="13" fill="#E2E8F0" font-size="9.5" font-weight="600" letter-spacing="0.8" class="mono">
+      SYS-NODE: ACTIVE
+    </text>
+  </g>
+
+  <!-- Horizontal Divider -->
+  <line x1="16" y1="46" x2="564" y2="46" stroke="#1E293B" stroke-width="1" />
+
+  <!-- Operator Overview Card -->
+  <g transform="translate(24, 62)">
+    <text x="0" y="16" fill="#94A3B8" font-size="10" letter-spacing="1.5" class="mono">PROFILE MATRIX</text>
+    <text x="0" y="42" fill="#FFFFFF" font-size="22" font-weight="800" class="sans">Shiva Pathak</text>
+    <text x="0" y="60" fill="#38BDF8" font-size="11.5" font-weight="600" class="mono">Full Stack Dev | Backend Enthusiast</text>
+    <text x="0" y="78" fill="#94A3B8" font-size="11" class="mono">📍 India • @shivapathak-code</text>
+
+    <!-- Mini Info Badges -->
+    <g transform="translate(0, 94)">
+      <rect x="0" y="0" width="122" height="22" rx="4" fill="#0F172A" stroke="#2563EB" stroke-width="0.7" />
+      <text x="8" y="14" fill="#60A5FA" font-size="9" font-weight="600" class="mono">CORE: NODE &amp; JAVA</text>
+
+      <rect x="130" y="0" width="120" height="22" rx="4" fill="#0F172A" stroke="#FF2A5F" stroke-width="0.7" />
+      <text x="138" y="14" fill="#FF2A5F" font-size="9" font-weight="600" class="mono">DATA: MONGO / SQL</text>
+    </g>
+  </g>
+
+  <!-- Right Side: Diagnostics & Telemetry Gauges -->
+  <g transform="translate(290, 62)">
+    <rect x="0" y="0" width="266" height="126" rx="8" fill="#090E20" stroke="#1E293B" stroke-width="1" />
+    
+    <rect x="0" y="0" width="266" height="24" rx="8" fill="#0D1630" />
+    <path d="M 0 16 L 0 24 L 266 24 L 266 16 Z" fill="#0D1630" />
+    <circle cx="14" cy="12" r="3" fill="#FF2A5F" />
+    <circle cx="26" cy="12" r="3" fill="#F59E0B" />
+    <circle cx="38" cy="12" r="3" fill="#10B981" />
+    <text x="54" y="15" fill="#94A3B8" font-size="9" font-weight="600" class="mono">RUNTIME TELEMETRY</text>
+
+    <!-- Telemetry Metric Rows -->
+    <g transform="translate(12, 36)" class="mono" font-size="10">
+      <text x="0" y="12" fill="#64748B">ARCHITECTURE:</text>
+      <text x="242" y="12" fill="#00F0FF" text-anchor="end" font-weight="600">FULL STACK</text>
+
+      <text x="0" y="32" fill="#64748B">DATABASES:</text>
+      <text x="242" y="32" fill="#38BDF8" text-anchor="end" font-weight="600">MONGO &amp; MYSQL</text>
+
+      <text x="0" y="52" fill="#64748B">API STANDARD:</text>
+      <text x="242" y="52" fill="#F8FAFC" text-anchor="end" font-weight="600">RESTful / JSON</text>
+
+      <text x="0" y="72" fill="#64748B">SECURITY / AUTH:</text>
+      <text x="242" y="72" fill="#10B981" text-anchor="end" font-weight="600">JWT AUTH</text>
+    </g>
+  </g>
+
+  <!-- Bottom Section: Live Metrics & System Signals -->
+  <g transform="translate(24, 204)">
+    <rect x="0" y="0" width="532" height="114" rx="8" fill="#090E20" stroke="#1E293B" stroke-width="1" />
+
+    <!-- Metric 1: Backend Architecture -->
+    <g transform="translate(16, 20)">
+      <text x="0" y="0" fill="#E2E8F0" font-size="10.5" font-weight="600" class="mono">BACKEND ARCHITECTURE &amp; REST APIS</text>
+      <text x="498" y="0" fill="#00F0FF" font-size="10.5" text-anchor="end" font-weight="700" class="mono">94%</text>
+      <rect x="0" y="8" width="500" height="5" rx="2.5" fill="#1E293B" />
+      <rect x="0" y="8" width="470" height="5" rx="2.5" fill="url(#barBlue)" />
+    </g>
+
+    <!-- Metric 2: Full-Stack Web & Dynamic UI -->
+    <g transform="translate(16, 52)">
+      <text x="0" y="0" fill="#E2E8F0" font-size="10.5" font-weight="600" class="mono">FULL-STACK WEB &amp; DYNAMIC UI (REACT)</text>
+      <text x="498" y="0" fill="#38BDF8" font-size="10.5" text-anchor="end" font-weight="700" class="mono">90%</text>
+      <rect x="0" y="8" width="500" height="5" rx="2.5" fill="#1E293B" />
+      <rect x="0" y="8" width="450" height="5" rx="2.5" fill="url(#barBlue)" />
+    </g>
+
+    <!-- Metric 3: System Scalability & AI Integration -->
+    <g transform="translate(16, 84)">
+      <text x="0" y="0" fill="#E2E8F0" font-size="10.5" font-weight="600" class="mono">SYSTEM SCALABILITY &amp; AI INTEGRATION</text>
+      <text x="498" y="0" fill="#FF2A5F" font-size="10.5" text-anchor="end" font-weight="700" class="mono">88%</text>
+      <rect x="0" y="8" width="500" height="5" rx="2.5" fill="#1E293B" />
+      <rect x="0" y="8" width="440" height="5" rx="2.5" fill="url(#barCrimson)" />
+    </g>
+  </g>
+</svg>

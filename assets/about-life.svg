@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="100%" height="auto">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="aboutBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1D" />
+      <stop offset="50%" stop-color="#0A1126" />
+      <stop offset="100%" stop-color="#060914" />
+    </linearGradient>
+
+    <!-- Border Gradient -->
+    <linearGradient id="aboutBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="40%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#FF2A5F" />
+    </linearGradient>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D152F" />
+      <stop offset="100%" stop-color="#090E20" />
+    </linearGradient>
+
+    <!-- Pattern -->
+    <pattern id="aboutGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1E293B" stroke-width="0.5" opacity="0.3" />
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes pulsePoint {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(0.8); opacity: 0.4; }
+    }
+    .pulse-dot {
+      animation: pulsePoint 2s infinite ease-in-out;
+      transform-origin: 30px 24px;
+    }
+    .mono {
+      font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+    }
+    .sans {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    }
+  </style>
+
+  <!-- Container -->
+  <rect x="2" y="2" width="636" height="416" rx="14" fill="url(#aboutBg)" stroke="url(#aboutBorder)" stroke-width="1.6" />
+  <rect x="3" y="3" width="634" height="414" rx="13" fill="url(#aboutGrid)" />
+
+  <!-- Header Section -->
+  <g transform="translate(24, 20)">
+    <rect x="0" y="0" width="180" height="22" rx="4" fill="#0E1834" stroke="#00F0FF" stroke-width="0.8" />
+    <circle cx="12" cy="11" r="3.5" fill="#00F0FF" class="pulse-dot" />
+    <text x="24" y="15" fill="#00F0FF" font-size="10" font-weight="700" letter-spacing="1" class="mono">
+      ABOUT // PROFILE
+    </text>
+
+    <!-- Title & Subtitle -->
+    <text x="0" y="52" fill="#FFFFFF" font-size="23" font-weight="800" class="sans" letter-spacing="-0.3">
+      Full Stack Developer
+    </text>
+    <text x="0" y="72" fill="#38BDF8" font-size="12" font-weight="600" class="mono">
+      Backend Engineering Enthusiast • System Scalability • AI Integration
+    </text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="24" y1="104" x2="616" y2="104" stroke="#1E293B" stroke-width="1" />
+
+  <!-- Grid of 4 Key Focus Cards -->
+  <!-- Card 1: End-to-End Problem Solver -->
+  <g transform="translate(24, 118)">
+    <rect x="0" y="0" width="286" height="130" rx="8" fill="url(#cardBg)" stroke="#1E293B" stroke-width="1" />
+    <rect x="0" y="0" width="4" height="130" rx="2" fill="#00F0FF" />
+    <g transform="translate(16, 16)">
+      <text x="0" y="12" fill="#00F0FF" font-size="11.5" font-weight="700" class="mono">01 // FULL STACK CORE</text>
+      <text x="0" y="30" fill="#FFFFFF" font-size="13" font-weight="600" class="sans">Robust Applications</text>
+      <text x="0" y="50" fill="#94A3B8" font-size="10.5" class="sans">
+        <tspan x="0" dy="0">Building robust, scalable, and efficient</tspan>
+        <tspan x="0" dy="16">full-stack web applications with clean</tspan>
+        <tspan x="0" dy="16">architecture and end-to-end solutions.</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- Card 2: REST APIs & Database Architectures -->
+  <g transform="translate(330, 118)">
+    <rect x="0" y="0" width="286" height="130" rx="8" fill="url(#cardBg)" stroke="#1E293B" stroke-width="1" />
+    <rect x="0" y="0" width="4" height="130" rx="2" fill="#3B82F6" />
+    <g transform="translate(16, 16)">
+      <text x="0" y="12" fill="#38BDF8" font-size="11.5" font-weight="700" class="mono">02 // APIS &amp; DATA DESIGN</text>
+      <text x="0" y="30" fill="#FFFFFF" font-size="13" font-weight="600" class="sans">APIs &amp; Schema Modeling</text>
+      <text x="0" y="50" fill="#94A3B8" font-size="10.5" class="sans">
+        <tspan x="0" dy="0">Designing stateless REST APIs, database</tspan>
+        <tspan x="0" dy="16">architectures with MongoDB &amp; MySQL,</tspan>
+        <tspan x="0" dy="16">and secure JWT authentication flows.</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- Card 3: Dynamic Web Interfaces -->
+  <g transform="translate(24, 262)">
+    <rect x="0" y="0" width="286" height="130" rx="8" fill="url(#cardBg)" stroke="#1E293B" stroke-width="1" />
+    <rect x="0" y="0" width="4" height="130" rx="2" fill="#FF2A5F" />
+    <g transform="translate(16, 16)">
+      <text x="0" y="12" fill="#FF2A5F" font-size="11.5" font-weight="700" class="mono">03 // DYNAMIC WEB INTERFACES</text>
+      <text x="0" y="30" fill="#FFFFFF" font-size="13" font-weight="600" class="sans">Modern Frontend UIs</text>
+      <text x="0" y="50" fill="#94A3B8" font-size="10.5" class="sans">
+        <tspan x="0" dy="0">Crafting dynamic user interfaces using</tspan>
+        <tspan x="0" dy="16">React, modern CSS, and JavaScript for</tspan>
+        <tspan x="0" dy="16">intuitive client experiences.</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- Card 4: System Scalability & AI Integration -->
+  <g transform="translate(330, 262)">
+    <rect x="0" y="0" width="286" height="130" rx="8" fill="url(#cardBg)" stroke="#1E293B" stroke-width="1" />
+    <rect x="0" y="0" width="4" height="130" rx="2" fill="#10B981" />
+    <g transform="translate(16, 16)">
+      <text x="0" y="12" fill="#10B981" font-size="11.5" font-weight="700" class="mono">04 // SYSTEMS &amp; AI</text>
+      <text x="0" y="30" fill="#FFFFFF" font-size="13" font-weight="600" class="sans">Scalability &amp; AI Integration</text>
+      <text x="0" y="50" fill="#94A3B8" font-size="10.5" class="sans">
+        <tspan x="0" dy="0">Particularly interested in backend system</tspan>
+        <tspan x="0" dy="16">scalability, data throughput, and</tspan>
+        <tspan x="0" dy="16">integrating smart AI-driven features.</tspan>
+      </text>
+    </g>
+  </g>
+</svg>
